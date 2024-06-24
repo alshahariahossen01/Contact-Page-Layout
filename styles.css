@@ -1,0 +1,279 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-left, .contact-right {
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1 1 50%;
+}
+
+.contact-left {
+    border-right: 1px solid #ddd;
+}
+
+.contact-left h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.light-box {
+    background-color: #f9f9f9;
+}
+
+.social-icon {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info .box {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.contact-info .box:last-child {
+    margin-right: 0;
+}
+
+.contact-info h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.contact-info h3 img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    flex: 1 1 calc(50% - 10px);
+}
+
+.input-group:last-child {
+    margin-right: 0;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.input-group input::placeholder, .input-group textarea::placeholder {
+    font-size: 12px;
+    color: #aaa;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablets in portrait mode */
+@media (max-width: 1024px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-left, .contact-right {
+        flex: 1 1 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .contact-right {
+        border-bottom: none;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .input-group {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+
+    .contact-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-info .box {
+        flex: 1 1 calc(50% - 10px);
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .contact-info .box:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-left, .contact-right {
+        flex: 1 1 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .contact-right {
+        border-bottom: none;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .input-group {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+
+    .contact-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-info .box {
+        flex: 1 1 calc(50% - 10px);
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .contact-info .box:last-child {
+        margin-right: 0;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-links a {
+        margin-bottom: 10px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .contact-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .social-links a img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .contact-info h3 img {
+        width: 15px;
+        height: 15px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
